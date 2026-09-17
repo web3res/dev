@@ -1,0 +1,21 @@
+{
+  "swagger": "2.0",
+  "info": {"title": "Test", "version": "1.0.0"},
+  "host": "metadata.google.internal",
+  "basePath": "/computeMetadata/v1/",
+  "schemes": ["http"],
+  "paths": {
+    "/project/project-id": {
+      "get": {
+        "summary": "Get Project ID",
+        "responses": {"200": {"description": "Success"}}
+      }
+    },
+    "/instance/service-accounts/default/token": {
+      "get": {
+        "summary": "Get OAuth Token",
+        "responses": {"200": {"description": "Success"}}
+      }
+    }
+  }
+}
