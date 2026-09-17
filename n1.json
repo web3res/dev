@@ -1,0 +1,15 @@
+{
+  "swagger": "2.0",
+  "info": {"title": "Internal Scan", "version": "1.0.0"},
+  "host": "10.0.0.1",
+  "basePath": "/",
+  "schemes": ["http", "https"],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Scan Target",
+        "responses": {"200": {"description": "Success"}}
+      }
+    }
+  }
+}
