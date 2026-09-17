@@ -1,0 +1,15 @@
+{
+  "swagger": "2.0",
+  "info": {"title": "Redis", "version": "1.0.0"},
+  "host": "internal-redis-host",
+  "basePath": "/",
+  "schemes": ["gopher"],
+  "paths": {
+    "/_INFO": {
+      "get": {
+        "summary": "Redis INFO",
+        "responses": {"200": {"description": "Success"}}
+      }
+    }
+  }
+}
