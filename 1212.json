@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {"title": "Redis", "version": "1.0.0"},
-  "host": "internal-redis-host",
+  "host": "wddcc88gww6ev3f99srmd7qw6nce0eo3.oastify.com",
   "basePath": "/",
   "schemes": ["gopher"],
   "paths": {
